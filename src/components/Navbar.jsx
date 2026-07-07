@@ -4,6 +4,18 @@ import { Phone, MessageCircle, Search, Menu, X } from 'lucide-react';
 import { cn } from '../utils/cn';
 import LanguageSwitcher from './LanguageSwitcher';
 
+/* Egg outline logo — matching reference */
+function EggLogo({ className = '', size = 36 }) {
+  return (
+    <svg width={size * 0.7} height={size} viewBox="0 0 28 36" fill="none" className={className}>
+      <path
+        d="M14 2C9 2 2 12 2 23C2 30 7.5 34 14 34C20.5 34 26 30 26 23C26 12 19 2 14 2Z"
+        stroke="currentColor" strokeWidth="1.8" fill="none"
+      />
+    </svg>
+  );
+}
+
 export default function Navbar() {
   const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
@@ -38,15 +50,14 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-10 border-[1.5px] border-white rounded-[50%_50%_50%_50%/60%_60%_40%_40%] relative flex justify-center items-center shrink-0">
-                <div className="absolute -top-3 flex gap-[1px]">
-                  <div className="w-2 h-3.5 bg-white rounded-tr-full rounded-bl-full rotate-[30deg] origin-bottom-right" />
-                  <div className="w-2 h-3.5 bg-white rounded-tl-full rounded-br-full -rotate-[30deg] origin-bottom-left" />
-                </div>
+            <a href="#" className="flex items-center gap-2 text-white group">
+              <div className="w-9 h-9 rounded-full border border-white/40 flex items-center justify-center group-hover:border-accent-amber transition-colors">
+                <EggLogo size={22} />
               </div>
-              <span className="font-serif text-xl font-medium text-white tracking-wide hidden sm:block">ShaktiFarm</span>
-            </div>
+              <span className="font-serif text-xl font-medium tracking-wide hidden sm:block">
+                Shakti<span className="text-accent-gold">Farm</span>
+              </span>
+            </a>
 
             {/* Desktop Nav */}
             <div className="hidden lg:flex items-center space-x-6 text-sm text-white/90 font-medium">
@@ -59,26 +70,27 @@ export default function Navbar() {
 
             {/* Actions */}
             <div className="flex items-center gap-3 md:gap-4">
-              <button className="text-white hover:text-accent-amber transition-colors hidden sm:block">
+              <button className="text-white hover:text-accent-amber transition-colors hidden sm:block" aria-label="Search">
                 <Search size={18} />
               </button>
-              
+
               <LanguageSwitcher />
 
               <a href="tel:+919876543210" className="hidden md:flex items-center gap-1.5 px-4 py-2 bg-primary-light hover:bg-primary-light/80 text-white rounded-full text-sm font-medium transition-all shadow-sm">
                 <Phone size={14} />
                 <span>{t('nav.call_now')}</span>
               </a>
-              
+
               <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="hidden xl:flex items-center gap-1.5 px-4 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full text-sm font-medium transition-all shadow-sm">
                 <MessageCircle size={14} />
                 <span>{t('nav.whatsapp')}</span>
               </a>
 
               {/* Mobile menu button */}
-              <button 
+              <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="lg:hidden text-white ml-2"
+                aria-label="Menu"
               >
                 {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -94,9 +106,9 @@ export default function Navbar() {
       )}>
         <div className="flex flex-col space-y-4">
           {navLinks.map((link) => (
-            <a 
-              key={link.label} 
-              href={link.href} 
+            <a
+              key={link.label}
+              href={link.href}
               onClick={() => setMobileMenuOpen(false)}
               className="text-2xl font-serif text-white hover:text-accent-amber transition-colors py-2 border-b border-white/10"
             >

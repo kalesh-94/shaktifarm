@@ -20,7 +20,7 @@ export default function About() {
           >
             <div className="rounded-[40px] overflow-hidden rounded-bl-[100px] rounded-tr-[100px] shadow-2xl relative aspect-[4/5] max-w-md mx-auto lg:mx-0">
               <img 
-                src="https://images.unsplash.com/photo-1548483984-bf5c8f8eb5f1?q=80&w=2074&auto=format&fit=crop" 
+                src="https://img.magnific.com/free-photo/close-up-beautiful-chickens_23-2150741833.jpg?semt=ais_hybrid&w=740&q=80" 
                 alt="Happy Hens" 
                 className="w-full h-full object-cover"
               />

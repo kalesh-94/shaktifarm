@@ -28,7 +28,7 @@ export default function FeaturedProduct() {
             {/* Image */}
             <div className="relative rounded-3xl overflow-hidden aspect-square md:aspect-auto md:h-full bg-secondary-cream">
               <img 
-                src="https://images.unsplash.com/photo-1598935934664-53900998f45a?q=80&w=1974&auto=format&fit=crop" 
+                src="https://5.imimg.com/data5/ANDROID/Default/2021/8/OR/AL/WX/100036801/product-jpeg-500x500.jpg" 
                 alt="Gavran Desi Eggs" 
                 className="w-full h-full object-cover"
               />
