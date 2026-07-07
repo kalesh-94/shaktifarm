@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "gallery": "Gallery",
+    "why_us": "Why Us",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "call_now": "Call Now",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "headline": "Pure Gavran Desi Eggs",
+    "subheadline": "Naturally raised, rich in nutrition and collected fresh every single day. At ShaktiFarm we practise ethical, chemical-free farming so every egg carries the taste of pure heritage.",
+    "explore": "Explore Products",
+    "contact": "Contact Us",
+    "trust": "Why families trust us",
+    "natural": "100% Natural",
+    "chemical_free": "Chemical Free",
+    "fresh": "Fresh Every Day",
+    "healthy": "Healthy Chickens"
+  },
+  "about": {
+    "title": "OUR STORY",
+    "headline": "Ethically raised, naturally nourished",
+    "description_1": "ShaktiFarm began with a simple belief - that the purest eggs come from the happiest hens. Our free-range Gavran birds roam open pastures, feed on a natural chemical-free diet and are cared for under strict hygiene standards.",
+    "description_2": "Every egg is collected fresh daily, hand-graded and dispatched the same day, so your family receives nothing but authentic, wholesome nutrition. As a trusted manufacturer, supplier and exporter, quality is our promise.",
+    "est": "Est. 2021",
+    "heritage": "ROOTED IN HERITAGE",
+    "stat_1_val": "2021",
+    "stat_1_lbl": "Established",
+    "stat_2_val": "100%",
+    "stat_2_lbl": "Natural Feed",
+    "stat_3_val": "12k+",
+    "stat_3_lbl": "Eggs / Day",
+    "stat_4_val": "100%",
+    "stat_4_lbl": "Pan India"
+  },
+  "whyus": {
+    "title": "WHY SHAKTIFARM",
+    "headline": "Six reasons we've earned lasting trust"
+  }
+}
