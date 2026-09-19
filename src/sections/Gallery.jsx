@@ -8,7 +8,6 @@ export default function Gallery() {
     { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSAgDZYMYRGem0Kbss2TjkWaWo0ha1BZ7y-K8KjVjMzRQ5r4q1vShL2DK&s=10', alt: 'Chicken', className: 'md:col-span-1 md:row-span-1' },
     { src: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2070&auto=format&fit=crop', alt: 'Basket', className: 'md:col-span-2 md:row-span-1' },
   ];
-
   return (
     <section id="gallery" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

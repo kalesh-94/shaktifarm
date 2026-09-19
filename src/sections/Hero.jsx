@@ -8,7 +8,7 @@ export default function Hero() {
   const { t } = useTranslation();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const bgImage = 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2232&auto=format&fit=crop';
+  const bgImage = '\shaktifarm bg.png';
 
   return (
     <section id="home" className="relative min-h-screen flex items-end overflow-hidden">
@@ -23,9 +23,9 @@ export default function Hero() {
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(180deg, rgba(30,20,10,0.35) 0%, rgba(30,20,10,0.25) 30%, rgba(30,20,10,0.55) 70%, rgba(26,58,31,0.85) 100%)'
         }} />
-        <div className="absolute inset-0" style={{
+        {/* <div className="absolute inset-0" style={{
           background: 'linear-gradient(90deg, rgba(26,58,31,0.6) 0%, transparent 60%)'
-        }} />
+        }} /> */}
       </div>
 
       {/* Floating decorative egg outlines — matching reference */}
@@ -80,7 +80,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.7 }}
-                >
+                > Shakti Farm <br />
                   Pure Gavran
                 </motion.span>
                 <motion.span
