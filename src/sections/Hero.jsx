@@ -8,7 +8,7 @@ export default function Hero() {
   const { t } = useTranslation();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const bgImage = '\shaktifarm bg.png';
+  const bgImage = '/shaktifarm-bg.webp';
 
   return (
     <section id="home" className="relative min-h-screen flex items-end overflow-hidden">
@@ -18,6 +18,8 @@ export default function Hero() {
           src={bgImage}
           alt="ShaktiFarm — sunrise over lush green farm fields"
           className="w-full h-full object-cover object-center"
+          fetchPriority="high"
+          decoding="async"
         />
         {/* Warm cinematic overlay — golden/sunset look like reference */}
         <div className="absolute inset-0" style={{
