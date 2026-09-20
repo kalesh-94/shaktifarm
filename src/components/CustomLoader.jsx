@@ -16,32 +16,23 @@ export default function CustomLoader({ onComplete }) {
       exit={{ opacity: 0, transition: { duration: 0.6, ease: 'easeInOut' } }}
     >
       <div className="relative flex flex-col items-center">
-        {/* Egg Shape */}
-        <motion.div
-          className="w-16 h-20 border-[2.5px] border-[#B68D40] rounded-[50%_50%_50%_50%/60%_60%_40%_40%] relative flex justify-center"
-          initial={{ scale: 0.8, opacity: 0 }}
+        {/* Logo */}
+        <motion.img
+          src="/shaktilogo.png"
+          alt="ShaktiFarm logo"
+          className="w-32 h-auto object-contain"
+          initial={{ scale: 0.85, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-        >
-          {/* Leaves */}
-          <motion.div
-            className="absolute -top-5 flex gap-[2px]"
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.4, type: 'spring' }}
-          >
-            <div className="w-3.5 h-6 bg-[#234B2A] rounded-tr-full rounded-bl-full rotate-[30deg] origin-bottom-right" />
-            <div className="w-3.5 h-6 bg-[#234B2A] rounded-tl-full rounded-br-full -rotate-[30deg] origin-bottom-left" />
-          </motion.div>
-        </motion.div>
-        
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        />
+
         {/* Brand Text */}
         <motion.h1
           className="mt-6 font-serif text-3xl text-[#234B2A] tracking-wide"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.5 }}
-        >
+          transition={{ delay: 0.7, duration: 0.5 }}
+        > Welcome to
           ShaktiFarm
         </motion.h1>
       </div>

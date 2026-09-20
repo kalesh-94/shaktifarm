@@ -4,18 +4,6 @@ import { Phone, MessageCircle, Search, Menu, X } from 'lucide-react';
 import { cn } from '../utils/cn';
 import LanguageSwitcher from './LanguageSwitcher';
 
-/* Egg outline logo — matching reference */
-function EggLogo({ className = '', size = 36 }) {
-  return (
-    <svg width={size * 0.7} height={size} viewBox="0 0 28 36" fill="none" className={className}>
-      <path
-        d="M14 2C9 2 2 12 2 23C2 30 7.5 34 14 34C20.5 34 26 30 26 23C26 12 19 2 14 2Z"
-        stroke="currentColor" strokeWidth="1.8" fill="none"
-      />
-    </svg>
-  );
-}
-
 export default function Navbar() {
   const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
@@ -50,10 +38,12 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-2 text-white group">
-              <div className="w-9 h-9 rounded-full border border-white/40 flex items-center justify-center group-hover:border-accent-amber transition-colors">
-                <EggLogo size={22} />
-              </div>
+            <a href="#" className="flex items-center gap-2.5 text-white group">
+              <img
+                src="/shaktilogo.png"
+                alt="ShaktiFarm logo"
+                className="h-16 w-auto object-contain transition-transform group-hover:scale-105"
+              />
               <span className="font-serif text-xl font-medium tracking-wide hidden sm:block">
                 Shakti<span className="text-accent-gold">Farm</span>
               </span>
