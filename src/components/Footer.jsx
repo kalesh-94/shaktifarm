@@ -27,13 +27,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="lg:pr-8">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-6 h-8 border-2 border-accent-gold rounded-[50%_50%_50%_50%/60%_60%_40%_40%] relative flex justify-center items-center">
-                <div className="absolute -top-2.5 flex gap-[1px]">
-                  <div className="w-1.5 h-2.5 bg-accent-gold rounded-tr-full rounded-bl-full rotate-[30deg]" />
-                  <div className="w-1.5 h-2.5 bg-accent-gold rounded-tl-full rounded-br-full -rotate-[30deg]" />
-                </div>
-              </div>
+            <div className="flex items-center gap-3 mb-6">
+              <img
+                src="/shaktilogo.png"
+                alt="ShaktiFarm logo"
+                className="h-14 w-auto object-contain"
+              />
               <span className="font-serif text-2xl text-white font-medium tracking-wide">ShaktiFarm</span>
             </div>
             <p className="text-sm leading-relaxed mb-6 text-white/70">Pure Gavran Desi eggs from ethically raised, free-range hens. Farm fresh, naturally healthy — delivered across India.</p>

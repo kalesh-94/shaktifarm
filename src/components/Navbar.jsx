@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Phone, MessageCircle, Search, Menu, X } from 'lucide-react';
+import { Phone, MessageCircle, Menu, X } from 'lucide-react';
 import { cn } from '../utils/cn';
 import LanguageSwitcher from './LanguageSwitcher';
+
+/* Instagram glyph — lucide-react no longer ships brand icons */
+function InstagramIcon({ size = 14 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -60,15 +71,16 @@ export default function Navbar() {
 
             {/* Actions */}
             <div className="flex items-center gap-3 md:gap-4">
-              <button className="text-white hover:text-accent-amber transition-colors hidden sm:block" aria-label="Search">
-                <Search size={18} />
-              </button>
-
               <LanguageSwitcher />
 
               <a href="tel:+919876543210" className="hidden md:flex items-center gap-1.5 px-4 py-2 bg-primary-light hover:bg-primary-light/80 text-white rounded-full text-sm font-medium transition-all shadow-sm">
                 <Phone size={14} />
                 <span>{t('nav.call_now')}</span>
+              </a>
+
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="hidden xl:flex items-center gap-1.5 px-4 py-2 bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] hover:opacity-90 text-white rounded-full text-sm font-medium transition-all shadow-sm">
+                <InstagramIcon size={14} />
+                <span>{t('nav.instagram')}</span>
               </a>
 
               <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="hidden xl:flex items-center gap-1.5 px-4 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full text-sm font-medium transition-all shadow-sm">
