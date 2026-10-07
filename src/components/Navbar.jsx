@@ -29,7 +29,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: t('nav.home'), href: '#' },
+    { label: t('nav.home'), href: '#home' },
     { label: t('nav.about'), href: '#about' },
     { label: t('nav.products'), href: '#products' },
     { label: t('nav.gallery'), href: '#gallery' },
@@ -73,19 +73,20 @@ export default function Navbar() {
             <div className="flex items-center gap-3 md:gap-4">
               <LanguageSwitcher />
 
-              <a href="tel:+919876543210" className="hidden md:flex items-center gap-1.5 px-4 py-2 bg-primary-light hover:bg-primary-light/80 text-white rounded-full text-sm font-medium transition-all shadow-sm">
+              <a href="tel:+918983982623" className="hidden md:flex items-center gap-1.5 px-4 py-2 bg-primary-light hover:bg-primary-light/80 text-white rounded-full text-sm font-medium transition-all shadow-sm">
                 <Phone size={14} />
                 <span>{t('nav.call_now')}</span>
               </a>
 
-              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="hidden xl:flex items-center gap-1.5 px-4 py-2 bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] hover:opacity-90 text-white rounded-full text-sm font-medium transition-all shadow-sm">
-                <InstagramIcon size={14} />
-                <span>{t('nav.instagram')}</span>
-              </a>
+              
 
-              <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="hidden xl:flex items-center gap-1.5 px-4 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full text-sm font-medium transition-all shadow-sm">
+              <a href="https://wa.me/918983982623" target="_blank" rel="noreferrer" className="hidden xl:flex items-center gap-1.5 px-4 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full text-sm font-medium transition-all shadow-sm">
                 <MessageCircle size={14} />
                 <span>{t('nav.whatsapp')}</span>
+              </a>
+              <a href="https://www.instagram.com/shakti_gavran_poultry_farm/" target="_blank" rel="noreferrer" className="hidden xl:flex items-center gap-1.5 px-4 py-2 bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] hover:opacity-90 text-white rounded-full text-sm font-medium transition-all shadow-sm">
+                <InstagramIcon size={14} />
+                <span>{t('nav.instagram')}</span>
               </a>
 
               {/* Mobile menu button */}
@@ -118,11 +119,11 @@ export default function Navbar() {
             </a>
           ))}
           <div className="flex gap-4 pt-6">
-            <a href="tel:+919876543210" className="flex-1 flex justify-center items-center gap-2 px-4 py-3 bg-primary-light text-white rounded-full">
+            <a href="tel:+918983982623" className="flex-1 flex justify-center items-center gap-2 px-4 py-3 bg-primary-light text-white rounded-full">
               <Phone size={18} />
               <span>{t('nav.call_now')}</span>
             </a>
-            <a href="https://wa.me/919876543210" className="flex-1 flex justify-center items-center gap-2 px-4 py-3 bg-[#25D366] text-white rounded-full">
+            <a href="https://wa.me/918983982623" className="flex-1 flex justify-center items-center gap-2 px-4 py-3 bg-[#25D366] text-white rounded-full">
               <MessageCircle size={18} />
               <span>{t('nav.whatsapp')}</span>
             </a>

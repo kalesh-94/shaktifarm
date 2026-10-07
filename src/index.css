@@ -5,6 +5,23 @@
 @tailwind utilities;
 
 @layer base {
+  /* Anchor jumps scroll the document root, so smooth scrolling has to live on
+     html — on a wrapper div it does nothing. */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Fixed navbar would otherwise cover the top of whatever section we land on. */
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   body {
     @apply bg-secondary-cream text-primary-dark font-sans antialiased overflow-x-hidden;
   }

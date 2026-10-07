@@ -1,24 +1,71 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Leaf } from 'lucide-react';
-import OrderPopup from '../components/OrderPopup';
+
+/* Hero background slideshow.
+   Add more images here and they crossfade in this order. Drop the files in
+   public/ and reference them as '/name.webp'. Keep the first one in sync with
+   the <link rel="preload"> in index.html. */
+const BG_IMAGES = [
+  '/shaktifarm-bg.webp',
+  '/bg3.png'
+];
+
+const SLIDE_MS = 7000;   // time each image is held
+const FADE_MS = 1000;    // crossfade duration
 
 export default function Hero() {
   const { t } = useTranslation();
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const bgImage = '/shaktifarm-bg.webp';
+  // `previous` stays mounted underneath during a crossfade, then clears.
+  const [{ current, previous }, setSlides] = useState({ current: 0, previous: null });
+
+  // Auto-advance. Skipped entirely for a single image or reduced-motion users.
+  useEffect(() => {
+    if (BG_IMAGES.length < 2) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const id = setInterval(() => {
+      setSlides((s) => ({
+        current: (s.current + 1) % BG_IMAGES.length,
+        previous: s.current,
+      }));
+    }, SLIDE_MS);
+    return () => clearInterval(id);
+  }, []);
+
+  // Warm the next image so the crossfade never stalls on a cold fetch.
+  useEffect(() => {
+    if (BG_IMAGES.length < 2) return;
+    new Image().src = BG_IMAGES[(current + 1) % BG_IMAGES.length];
+  }, [current]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-end overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={bgImage}
-          alt="ShaktiFarm — sunrise over lush green farm fields"
-          className="w-full h-full object-cover object-center"
-          fetchPriority="high"
+        {/* Outgoing image sits underneath at full opacity while the incoming one
+            fades in on top, so the crossfade never dips to a dark midpoint. */}
+        {previous !== null && (
+          <img
+            key={`prev-${previous}`}
+            src={BG_IMAGES[previous]}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        )}
+        <motion.img
+          key={`cur-${current}`}
+          src={BG_IMAGES[current]}
+          alt="ShaktiFarm — farm fresh, naturally raised"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          initial={{ opacity: previous === null ? 1 : 0 }}   /* instant on first paint, crossfade thereafter */
+          animate={{ opacity: 1 }}
+          transition={{ duration: FADE_MS / 1000, ease: 'easeInOut' }}
+          onAnimationComplete={() => setSlides((s) => ({ ...s, previous: null }))}
+          fetchPriority={current === 0 ? 'high' : 'low'}
           decoding="async"
         />
         {/* Warm cinematic overlay — golden/sunset look like reference */}
@@ -78,13 +125,13 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
             >
-              <button
-                onClick={() => setIsPopupOpen(true)}
+              <a
+                href="#areas"
                 className="group px-8 py-4 bg-accent-amber hover:bg-[#b57a27] text-white rounded-full font-medium transition-all shadow-lg hover:shadow-xl hover:shadow-accent-amber/20 hover:-translate-y-0.5 flex items-center gap-2"
               >
                 {t('hero.explore')}
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </button>
+              </a>
               <a
                 href="#contact"
                 className="px-8 py-4 bg-transparent border border-white/40 hover:border-white/70 text-white rounded-full font-medium transition-all hover:bg-white/5"
@@ -102,8 +149,6 @@ export default function Hero() {
           <path d="M0,80 L0,40 Q360,0 720,40 Q1080,80 1440,40 L1440,80 Z" fill="#F8F4E8" />
         </svg>
       </div>
-
-      <OrderPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </section>
   );
 }

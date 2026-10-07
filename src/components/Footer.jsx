@@ -37,7 +37,7 @@ export default function Footer() {
             </div>
             <p className="text-sm leading-relaxed mb-6 text-white/70">Pure Gavran Desi eggs from ethically raised, free-range hens. Farm fresh, naturally healthy — delivered across India.</p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent-amber hover:border-accent-amber hover:text-white transition-all shadow-sm">
+              <a href="https://www.instagram.com/shakti_gavran_poultry_farm/" target="_blank" rel="noreferrer" aria-label="ShaktiFarm on Instagram" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent-amber hover:border-accent-amber hover:text-white transition-all shadow-sm">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </a>
               <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent-amber hover:border-accent-amber hover:text-white transition-all shadow-sm">
@@ -80,15 +80,15 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-white/70">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-accent-amber shrink-0 mt-0.5" />
-                <span className="leading-relaxed">Shakti Poultry Farm, Village Road, Nashik, Maharashtra 422001, India.</span>
+                <span className="leading-relaxed">Nutun Maratha College, Ganesh Colony Road, Jalgaon, Jalgaon 425001</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-accent-amber shrink-0" />
-                <span>+91 98765 43210</span>
+                <a href="tel:+918983982623" className="hover:text-accent-amber transition-colors">+91 89839 82623</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-accent-amber shrink-0" />
-                <span>hello@shaktifarm.in</span>
+                <a href="mailto:shaktifarm9377@gmail.com" className="hover:text-accent-amber transition-colors break-all">shaktifarm9377@gmail.com</a>
               </li>
             </ul>
           </div>

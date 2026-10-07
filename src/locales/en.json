@@ -14,7 +14,7 @@
   "hero": {
     "headline": "Pure Gavran Desi Eggs",
     "subheadline": "Naturally raised, rich in nutrition and collected fresh every single day. At ShaktiFarm we practise ethical, chemical-free farming so every egg carries the taste of pure heritage.",
-    "explore": "Explore Products",
+    "explore": "Our Services",
     "contact": "Contact Us",
     "trust": "Why families trust us",
     "natural": "100% Natural",
@@ -33,7 +33,7 @@
     "stat_1_lbl": "Established",
     "stat_2_val": "100%",
     "stat_2_lbl": "Natural Feed",
-    "stat_3_val": "12k+",
+    "stat_3_val": "1k+",
     "stat_3_lbl": "Eggs / Day",
     "stat_4_val": "100%",
     "stat_4_lbl": "Pan India"
@@ -41,5 +41,10 @@
   "whyus": {
     "title": "WHY SHAKTIFARM",
     "headline": "Six reasons we've earned lasting trust"
+  },
+  "areas": {
+    "title": "WHERE WE DELIVER",
+    "headline": "Farm-fresh eggs across Maharashtra",
+    "serving": "We serve our services in:"
   }
 }

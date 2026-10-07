@@ -37,20 +37,20 @@ export default function Contact() {
                   <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-accent-gold transition-colors shadow-inner">
                     <Phone size={24} className="text-accent-gold group-hover:text-white" />
                   </div>
-                  <span className="text-lg font-medium group-hover:text-accent-gold transition-colors">+91 98765 43210</span>
+                  <a href="tel:+918983982623" className="text-lg font-medium group-hover:text-accent-gold transition-colors">+91 89839 82623</a>
                 </div>
                 <div className="flex items-center gap-5 group cursor-pointer">
                   <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-accent-gold transition-colors shadow-inner">
                     <Mail size={24} className="text-accent-gold group-hover:text-white" />
                   </div>
-                  <span className="text-lg font-medium group-hover:text-accent-gold transition-colors">hello@shaktifarm.in</span>
+                  <a href="mailto:shaktifarm9377@gmail.com" className="text-lg font-medium group-hover:text-accent-gold transition-colors break-all">shaktifarm9377@gmail.com</a>
                 </div>
                 <div className="flex items-start gap-5 group">
                   <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-accent-gold transition-colors shadow-inner mt-1">
                     <MapPin size={24} className="text-accent-gold group-hover:text-white" />
                   </div>
                   <span className="text-lg leading-relaxed text-secondary-cream/90 group-hover:text-white transition-colors">
-                    Shakti Poultry Farm, Village Road, Nashik, Maharashtra 422001, India
+                    Nutun Maratha College, Ganesh Colony Road, Jalgaon, Jalgaon 425001
                   </span>
                 </div>
               </div>
