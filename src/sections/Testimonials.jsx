@@ -3,9 +3,8 @@ import { motion } from 'framer-motion';
 
 export default function Testimonials() {
   const reviews = [
-    { text: "The richest yolks I've ever cooked with. You can genuinely taste the difference of real Gavran eggs.", author: "Ananya Deshmukh", loc: "Pune, Maharashtra", rating: 5 },
-    { text: "We switched our entire restaurant to ShaktiFarm. Consistent size, strong shells, unbeatable freshness.", author: "Chef Rohan Mehta", loc: "Mumbai", rating: 5 },
-    { text: "Delivered the same morning they're collected. My family finally eats eggs we can fully trust.", author: "Priya Nair", loc: "Bengaluru, Karnataka", rating: 5 },
+    { text: "We switched our entire restaurant to ShaktiFarm. Consistent size, strong shells, unbeatable freshness.", author: "Mayuri", rating: 5 },
+    { text: "The richest yolks I've ever cooked with. You can genuinely taste the difference of real Gavran eggs, My family finally eats eggs we can fully trust.", author: "Dyanesh Mali", rating: 5 },
   ];
 
   return (
@@ -35,7 +34,7 @@ export default function Testimonials() {
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 bg-secondary-cream rounded-full overflow-hidden border-2 border-white shadow-sm">
-                  <img src={`https://i.pravatar.cc/150?img=${idx + 10}`} alt={rev.author} className="w-full h-full object-cover" />
+                  {/* <img src={`https://i.pravatar.cc/150?img=${idx + 10}`} alt={rev.author} className="w-full h-full object-cover" /> */}
                 </div>
                 <div>
                   <h4 className="font-bold text-primary-dark">{rev.author}</h4>

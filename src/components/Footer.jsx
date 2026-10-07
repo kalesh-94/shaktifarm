@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
 
           {/* Products */}
-          <div>
+          {/* <div>
             <h4 className="font-medium text-white mb-6 uppercase tracking-wider text-sm">Products</h4>
             <ul className="space-y-4 text-sm text-white/70">
               <li><a href="#" className="hover:text-accent-amber transition-colors">Gavran Desi Eggs</a></li>
@@ -59,7 +59,7 @@ export default function Footer() {
               <li><a href="#" className="hover:text-accent-amber transition-colors">Bakery Supply</a></li>
               <li><a href="#" className="hover:text-accent-amber transition-colors">Export Enquiry</a></li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Quick Links */}
           <div>

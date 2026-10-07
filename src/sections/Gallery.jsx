@@ -6,7 +6,7 @@ export default function Gallery() {
     { src: 'https://static.toiimg.com/thumb/msid-118243609,width-1280,height-720,resizemode-4/118243609.jpg', alt: 'Farm', className: 'md:col-span-1 md:row-span-2' },
     { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOaLs8dGdLgvKSVkPGDHdZ6i_tdUoIeDfWYlGGHI1Ta-dLlX7heJuLGbvE&s=10', alt: 'Eggs', className: 'md:col-span-1 md:row-span-1' },
     { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSAgDZYMYRGem0Kbss2TjkWaWo0ha1BZ7y-K8KjVjMzRQ5r4q1vShL2DK&s=10', alt: 'Chicken', className: 'md:col-span-1 md:row-span-1' },
-    { src: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2070&auto=format&fit=crop', alt: 'Basket', className: 'md:col-span-2 md:row-span-1' },
+    { src: '/henhouse-eggs.png', alt: 'Fresh eggs at the henhouse', className: 'md:col-span-2 md:row-span-1' },
   ];
   return (
     <section id="gallery" className="py-24 bg-white">
