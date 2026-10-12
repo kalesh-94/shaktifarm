@@ -3,6 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FileText, Send } from 'lucide-react';
 
+// Spec cards, in display order. Labels/values live under product.specs in the locale files.
+const SPECS = ['colour', 'origin', 'country', 'usage', 'packaging', 'grade'];
+
 export default function FeaturedProduct() {
   const { t } = useTranslation();
 
@@ -10,9 +13,9 @@ export default function FeaturedProduct() {
     <section id="products" className="py-24 bg-secondary-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="text-sm font-medium tracking-widest text-primary-light uppercase">FEATURED PRODUCT</span>
+          <span className="text-sm font-medium tracking-widest text-primary-light uppercase">{t('product.title')}</span>
           <h2 className="mt-4 font-serif text-4xl md:text-5xl text-primary-dark leading-tight">
-            Pure Gavran Desi Eggs
+            {t('product.headline')}
           </h2>
         </div>
 
@@ -33,7 +36,7 @@ export default function FeaturedProduct() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-6 left-6 bg-accent-amber text-white px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase shadow-lg">
-                Premium Grade A
+                {t('product.badge')}
               </div>
             </div>
 
@@ -43,54 +46,36 @@ export default function FeaturedProduct() {
                 {[...Array(5)].map((_, i) => (
                   <span key={i}>★</span>
                 ))}
-                <span className="text-gray-500 text-sm ml-2 font-medium tracking-wide">Loved by 2,400+ families</span>
+                <span className="text-gray-500 text-sm ml-2 font-medium tracking-wide">{t('product.loved')}</span>
               </div>
-              
+
               <h3 className="text-3xl md:text-4xl font-serif text-primary-dark mb-4 leading-tight">
-                Farm-fresh, naturally rich yolks
+                {t('product.subheadline')}
               </h3>
-              
+
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Sourced from our free-range Gavran hens, these light-brown desi eggs deliver deeper flavour, firmer whites and golden nutrient-dense yolks - perfect for daily consumption, hotels, restaurants and bakeries.
+                {t('product.description')}
               </p>
 
               {/* Specs */}
               <div className="grid grid-cols-2 gap-4 mb-10">
-                <div className="bg-secondary-cream/50 p-4 rounded-2xl border border-gray-100">
-                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1 block">Colour</span>
-                  <span className="text-primary-dark font-medium">Light Brown</span>
-                </div>
-                <div className="bg-secondary-cream/50 p-4 rounded-2xl border border-gray-100">
-                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1 block">Origin</span>
-                  <span className="text-primary-dark font-medium">Free Range Chicken</span>
-                </div>
-                <div className="bg-secondary-cream/50 p-4 rounded-2xl border border-gray-100">
-                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1 block">Country</span>
-                  <span className="text-primary-dark font-medium">India</span>
-                </div>
-                <div className="bg-secondary-cream/50 p-4 rounded-2xl border border-gray-100">
-                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1 block">Usage</span>
-                  <span className="text-primary-dark font-medium">Daily • Hotels • Bakery</span>
-                </div>
-                <div className="bg-secondary-cream/50 p-4 rounded-2xl border border-gray-100">
-                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1 block">Packaging</span>
-                  <span className="text-primary-dark font-medium">Tray • Caret • Carton</span>
-                </div>
-                <div className="bg-secondary-cream/50 p-4 rounded-2xl border border-gray-100">
-                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1 block">Grade</span>
-                  <span className="text-primary-dark font-medium">Premium A</span>
-                </div>
+                {SPECS.map((key) => (
+                  <div key={key} className="bg-secondary-cream/50 p-4 rounded-2xl border border-gray-100">
+                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1 block">{t(`product.specs.${key}_lbl`)}</span>
+                    <span className="text-primary-dark font-medium">{t(`product.specs.${key}_val`)}</span>
+                  </div>
+                ))}
               </div>
 
               {/* Actions */}
               <div className="flex flex-wrap items-center gap-4 mt-auto">
                 <a href="#contact" className="flex-1 flex justify-center items-center gap-2 px-6 py-4 bg-primary-dark hover:bg-primary-dark/90 text-white rounded-2xl font-medium transition-colors shadow-lg">
                   <FileText size={18} />
-                  Request Quote
+                  {t('product.quote')}
                 </a>
                 <a href="#contact" className="flex-1 flex justify-center items-center gap-2 px-6 py-4 bg-accent-amber hover:bg-accent-gold text-white rounded-2xl font-medium transition-colors shadow-lg">
                   <Send size={18} />
-                  Enquire Now
+                  {t('product.enquire')}
                 </a>
               </div>
             </div>

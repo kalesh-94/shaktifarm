@@ -76,11 +76,21 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-medium text-white mb-6 uppercase tracking-wider text-sm">Contact</h4>
+            <h4 className="font-medium text-white mb-6 uppercase tracking-wider text-sm">{t('nav.contact')}</h4>
             <ul className="space-y-4 text-sm text-white/70">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-accent-amber shrink-0 mt-0.5" />
-                <span className="leading-relaxed">Nutun Maratha College, Ganesh Colony Road, Jalgaon, Jalgaon 425001</span>
+                <span className="leading-relaxed">
+                  <span className="block font-medium text-white">{t('contact.office_label')}</span>
+                  {t('contact.office_address')}
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin size={18} className="text-accent-amber shrink-0 mt-0.5" />
+                <span className="leading-relaxed">
+                  <span className="block font-medium text-white">{t('contact.farm_label')}</span>
+                  {t('contact.farm_address')}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-accent-amber shrink-0" />

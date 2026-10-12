@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [status, setStatus] = useState('');
 
@@ -26,10 +28,10 @@ export default function Contact() {
             <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-accent-amber rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
             
             <div className="relative z-10">
-              <span className="text-sm font-medium tracking-widest text-accent-gold uppercase mb-4 block">GET IN TOUCH</span>
-              <h2 className="font-serif text-4xl mb-6 leading-tight">Quick enquiry & quotes</h2>
+              <span className="text-sm font-medium tracking-widest text-accent-gold uppercase mb-4 block">{t('contact.title')}</span>
+              <h2 className="font-serif text-4xl mb-6 leading-tight">{t('contact.headline')}</h2>
               <p className="text-secondary-cream/80 mb-12 leading-relaxed text-lg">
-                Whether you're a family, hotel or bakery - reach out for pricing, bulk orders or a friendly farm chat. We usually respond within a few hours.
+                {t('contact.description')}
               </p>
 
               <div className="space-y-8">
@@ -49,9 +51,23 @@ export default function Contact() {
                   <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-accent-gold transition-colors shadow-inner mt-1">
                     <MapPin size={24} className="text-accent-gold group-hover:text-white" />
                   </div>
-                  <span className="text-lg leading-relaxed text-secondary-cream/90 group-hover:text-white transition-colors">
-                    Nutun Maratha College, Ganesh Colony Road, Jalgaon, Jalgaon 425001
-                  </span>
+                  <div>
+                    <p className="text-sm font-medium uppercase tracking-wider text-accent-gold mb-1">{t('contact.office_label')}</p>
+                    <span className="text-lg leading-relaxed text-secondary-cream/90 group-hover:text-white transition-colors">
+                      {t('contact.office_address')}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-5 group">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-accent-gold transition-colors shadow-inner mt-1">
+                    <MapPin size={24} className="text-accent-gold group-hover:text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium uppercase tracking-wider text-accent-gold mb-1">{t('contact.farm_label')}</p>
+                    <span className="text-lg leading-relaxed text-secondary-cream/90 group-hover:text-white transition-colors">
+                      {t('contact.farm_address')}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -62,32 +78,32 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                  <input required type="text" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full px-5 py-4 rounded-2xl border border-gray-200 bg-secondary-cream/30 focus:bg-white focus:ring-2 focus:ring-accent-amber/50 focus:border-accent-amber transition-all outline-none" placeholder="Your name" />
+                  <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.name')}</label>
+                  <input required type="text" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full px-5 py-4 rounded-2xl border border-gray-200 bg-secondary-cream/30 focus:bg-white focus:ring-2 focus:ring-accent-amber/50 focus:border-accent-amber transition-all outline-none" placeholder={t('contact.name_ph')} />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.email')}</label>
                   <input required type="email" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} className="w-full px-5 py-4 rounded-2xl border border-gray-200 bg-secondary-cream/30 focus:bg-white focus:ring-2 focus:ring-accent-amber/50 focus:border-accent-amber transition-all outline-none" placeholder="you@example.com" />
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.phone')}</label>
                 <input required type="tel" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} className="w-full px-5 py-4 rounded-2xl border border-gray-200 bg-secondary-cream/30 focus:bg-white focus:ring-2 focus:ring-accent-amber/50 focus:border-accent-amber transition-all outline-none" placeholder="+91" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                <textarea required rows={4} value={formData.message} onChange={e => setFormData({...formData, message: e.target.value})} className="w-full px-5 py-4 rounded-2xl border border-gray-200 bg-secondary-cream/30 focus:bg-white focus:ring-2 focus:ring-accent-amber/50 focus:border-accent-amber transition-all outline-none resize-none" placeholder="How can we help you?" />
+                <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.message')}</label>
+                <textarea required rows={4} value={formData.message} onChange={e => setFormData({...formData, message: e.target.value})} className="w-full px-5 py-4 rounded-2xl border border-gray-200 bg-secondary-cream/30 focus:bg-white focus:ring-2 focus:ring-accent-amber/50 focus:border-accent-amber transition-all outline-none resize-none" placeholder={t('contact.message_ph')} />
               </div>
 
               <button disabled={status === 'sending'} type="submit" className={`w-full py-5 rounded-2xl font-bold transition-all shadow-lg flex justify-center items-center gap-2 text-lg mt-4 ${status === 'success' ? 'bg-[#25D366] text-white' : 'bg-accent-amber hover:bg-accent-gold text-white'}`}>
                 {status === 'sending' ? (
                   <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 ) : status === 'success' ? (
-                  'Message Sent Successfully!'
+                  t('contact.sent')
                 ) : (
                   <>
                     <Send size={20} />
-                    Send Enquiry
+                    {t('contact.send')}
                   </>
                 )}
               </button>

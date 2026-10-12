@@ -128,6 +128,10 @@ export default function Navbar() {
               <span>{t('nav.whatsapp')}</span>
             </a>
           </div>
+          <a href="https://www.instagram.com/shakti_gavran_poultry_farm/" target="_blank" rel="noreferrer" className="flex justify-center items-center gap-2 px-4 py-3 bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white rounded-full">
+            <InstagramIcon size={18} />
+            <span>{t('nav.instagram')}</span>
+          </a>
         </div>
       </div>
     </>

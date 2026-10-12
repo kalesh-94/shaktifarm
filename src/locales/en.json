@@ -27,9 +27,9 @@
     "headline": "Ethically raised, naturally nourished",
     "description_1": "ShaktiFarm began with a simple belief - that the purest eggs come from the happiest hens. Our free-range Gavran birds roam open pastures, feed on a natural chemical-free diet and are cared for under strict hygiene standards.",
     "description_2": "Every egg is collected fresh daily, hand-graded and dispatched the same day, so your family receives nothing but authentic, wholesome nutrition. As a trusted manufacturer, supplier and exporter, quality is our promise.",
-    "est": "Est. 2021",
+    "est": "Est. 2026",
     "heritage": "ROOTED IN HERITAGE",
-    "stat_1_val": "2021",
+    "stat_1_val": "2026",
     "stat_1_lbl": "Established",
     "stat_2_val": "100%",
     "stat_2_lbl": "Natural Feed",
@@ -46,5 +46,46 @@
     "title": "WHERE WE DELIVER",
     "headline": "Farm-fresh eggs across Maharashtra",
     "serving": "We serve our services in:"
+  },
+  "product": {
+    "title": "FEATURED PRODUCT",
+    "headline": "Pure Gavran Desi Eggs",
+    "badge": "Premium Grade A",
+    "loved": "Loved by 2,400+ families",
+    "subheadline": "Farm-fresh, naturally rich yolks",
+    "description": "Sourced from our free-range Gavran hens, these light-brown desi eggs deliver deeper flavour, firmer whites and golden nutrient-dense yolks - perfect for daily consumption, hotels, restaurants and bakeries.",
+    "specs": {
+      "colour_lbl": "Colour",
+      "colour_val": "Light Brown",
+      "origin_lbl": "Origin",
+      "origin_val": "Free Range Chicken",
+      "country_lbl": "Country",
+      "country_val": "India",
+      "usage_lbl": "Usage",
+      "usage_val": "Daily • Hotels • Bakery",
+      "packaging_lbl": "Packaging",
+      "packaging_val": "Tray • Caret • Carton",
+      "grade_lbl": "Grade",
+      "grade_val": "Premium A"
+    },
+    "quote": "Request Quote",
+    "enquire": "Enquire Now"
+  },
+  "contact": {
+    "title": "GET IN TOUCH",
+    "headline": "Quick enquiry & quotes",
+    "description": "Whether you're a family, hotel or bakery - reach out for pricing, bulk orders or a friendly farm chat. We usually respond within a few hours.",
+    "office_label": "Office Address",
+    "office_address": "Nutun Maratha College, Ganesh Colony Road, Jalgaon, Jalgaon 425001",
+    "farm_label": "Farm Address",
+    "farm_address": "ShaktiFarm, Sonwad Road, Dharangaon, Dist. Jalgaon. 425105",
+    "name": "Full Name",
+    "name_ph": "Your name",
+    "email": "Email Address",
+    "phone": "Phone",
+    "message": "Message",
+    "message_ph": "How can we help you?",
+    "send": "Send Enquiry",
+    "sent": "Message Sent Successfully!"
   }
 }
