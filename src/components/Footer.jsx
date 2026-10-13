@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -37,14 +37,14 @@ export default function Footer() {
             </div>
             <p className="text-sm leading-relaxed mb-6 text-white/70">Pure Gavran Desi eggs from ethically raised, free-range hens. Farm fresh, naturally healthy — delivered across India.</p>
             <div className="flex gap-4">
+              <a href="tel:+918983982623" aria-label="Call ShaktiFarm" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent-amber hover:border-accent-amber hover:text-white transition-all shadow-sm">
+                <Phone size={18} />
+              </a>
+              <a href="https://wa.me/918983982623" target="_blank" rel="noreferrer" aria-label="ShaktiFarm on WhatsApp" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent-amber hover:border-accent-amber hover:text-white transition-all shadow-sm">
+                <MessageCircle size={18} />
+              </a>
               <a href="https://www.instagram.com/shakti_gavran_poultry_farm/" target="_blank" rel="noreferrer" aria-label="ShaktiFarm on Instagram" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent-amber hover:border-accent-amber hover:text-white transition-all shadow-sm">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent-amber hover:border-accent-amber hover:text-white transition-all shadow-sm">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent-amber hover:border-accent-amber hover:text-white transition-all shadow-sm">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
               </a>
             </div>
           </div>
@@ -110,6 +110,7 @@ export default function Footer() {
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
+          <p className="mt-4 md:mt-0">Designed &amp; Developed by <a href="https://www.linkedin.com/in/kalesh-patil/" target="_blank" rel="noreferrer" className="text-white/80 font-medium hover:text-accent-amber transition-colors">Kalesh</a></p>
         </div>
       </div>
     </footer>
